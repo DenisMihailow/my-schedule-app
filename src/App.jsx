@@ -97,7 +97,7 @@ function App() {
                       placeholder="Бележка"
                       className="border rounded p-1 flex-1 text-sm"
                       onChange={(e) =>
-                        handleServiceChange(
+                        handleServiceChange( 
                           hour,
                           appointments[hour]?.service,
                           appointments[hour]?.price,
