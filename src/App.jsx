@@ -45,6 +45,12 @@ function App() {
               <p className="text-center mt-2 text-gray-600">
                 Избери дата, за да добавиш час 📅
               </p>
+              <button
+                onClick={() => setSelectedDate(null)}
+                className="mt-4 w-full bg-gray-300 text-gray-700 py-2 rounded-xl hover:bg-gray-400 transition"
+              >
+                ⬅ Назад
+              </button>
             </>
           ) : (
             <div>
