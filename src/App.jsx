@@ -46,11 +46,14 @@ function App() {
                 Избери дата, за да добавиш час 📅
               </p>
               <button
-                onClick={() => setSelectedDate(null)}
-                className="mt-4 w-full bg-gray-300 text-gray-700 py-2 rounded-xl hover:bg-gray-400 transition"
-              >
-                ⬅ Назад
-              </button>
+  onClick={() => {
+    setShowCalendar(false); // връща към началния екран
+    setSelectedDate(null);  // чисти избраната дата
+  }}
+  className="mt-4 w-full bg-gray-300 text-gray-700 py-2 rounded-xl hover:bg-gray-400 transition"
+>
+  ⬅ Назад
+</button>
             </>
           ) : (
             <div>
