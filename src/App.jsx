@@ -46,14 +46,14 @@ function App() {
                 Избери дата, за да добавиш час 📅
               </p>
               <button
-  onClick={() => {
-    setShowCalendar(false); // връща към началния екран
-    setSelectedDate(null);  // чисти избраната дата
-  }}
-  className="mt-4 w-full bg-gray-300 text-gray-700 py-2 rounded-xl hover:bg-gray-400 transition"
->
-  ⬅ Назад
-</button>
+                onClick={() => {
+                  setShowCalendar(false); // връща към началния екран
+                  setSelectedDate(null);  // чисти избраната дата
+                }}
+                className="mt-4 w-full bg-gray-300 text-gray-700 py-2 rounded-xl hover:bg-gray-400 transition"
+              >
+                ⬅ Назад
+              </button>
             </>
           ) : (
             <div>
@@ -88,6 +88,19 @@ function App() {
                         handleServiceChange(
                           hour,
                           appointments[hour]?.service,
+                          e.target.value
+                        )
+                      }
+                    />
+                    <input
+                      type="text"
+                      placeholder="Бележка"
+                      className="border rounded p-1 flex-1 text-sm"
+                      onChange={(e) =>
+                        handleServiceChange(
+                          hour,
+                          appointments[hour]?.service,
+                          appointments[hour]?.price,
                           e.target.value
                         )
                       }
